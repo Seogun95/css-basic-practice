@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="shortcut icon" href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.ico" />
+        <title>특성 선택자</title>
+        <!--https://developer.mozilla.org/ko/docs/Web/CSS/Attribute_selectors-->
+        <style>
+            input {
+                border: 1px solid yellowgreen;
+            }
+            input:required {
+                border-color: tomato;
+            }
+            input[placeholder='사용자 이름'] {
+                background-color: thistle;
+            }
+            /* ~=는 'name'을 포함하고 있다는 의미이다. */
+            input[placeholder~='name'] {
+                background-color: pink;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <input type="text" placeholder="사용자 이름" />
+            <input type="password" required placeholder="비밀번호" />
+
+            <input type="text" placeholder="First name" />
+            <input type="text" placeholder="Second name" />
+        </form>
+    </body>
+</html>
